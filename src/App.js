@@ -9,13 +9,18 @@ import "./App.css";
 function App() {
   return (
     <DndProvider backend={HTML5Backend}>
-      <div className="App">
-        <NavBar />
-        <div
-          style={{ display: "flex", flexDirection: "column", height: "100vh" }}
-        >
-          <Toolkit />
-          <CanvasArea />
+      <NavBar />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          height: "100vh",
+          //width: "50vh",
+        }}
+      >
+        <div className="content">
+          <Toolkit className="toolkit" />
+          <CanvasArea className="canvas" />
         </div>
       </div>
     </DndProvider>
