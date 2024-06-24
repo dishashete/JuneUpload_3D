@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Cube from "./Cube";
 import "./Toolkit.css";
 
 const Toolkit = () => {
+  const [searchQuery, setSearchQuery] = useState("");
   const cubes = [
     { id: 1, name: "Power" },
     { id: 2, name: "Battery" },
@@ -21,13 +22,28 @@ const Toolkit = () => {
     { id: 15, name: "IC" },
     { id: 16, name: "DC" },
     { id: 17, name: "Servo" },
+    { id: 18, name: "abc" },
+    { id: 19, name: "def" },
   ];
+
+  const filteredCubes = cubes.filter(cube =>
+    cube.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <div className="toolkit-container">
-      {cubes.map((cube) => (
-        <Cube key={cube.id} id={cube.id} name={cube.name} />
-      ))}
+      <input
+        type="text"
+        placeholder="Search components..."
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        className="search-bar"
+      />
+      <div className="cubes-container">
+        {filteredCubes.map((cube) => (
+          <Cube key={cube.id} id={cube.id} name={cube.name} />
+        ))}
+      </div>
     </div>
   );
 };
