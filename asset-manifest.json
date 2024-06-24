@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/JuneUpload_3D/static/css/main.f92d0511.css",
+    "main.js": "/JuneUpload_3D/static/js/main.7155aea7.js",
+    "static/js/453.c1aa55cb.chunk.js": "/JuneUpload_3D/static/js/453.c1aa55cb.chunk.js",
+    "index.html": "/JuneUpload_3D/index.html",
+    "main.f92d0511.css.map": "/JuneUpload_3D/static/css/main.f92d0511.css.map",
+    "main.7155aea7.js.map": "/JuneUpload_3D/static/js/main.7155aea7.js.map",
+    "453.c1aa55cb.chunk.js.map": "/JuneUpload_3D/static/js/453.c1aa55cb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f92d0511.css",
+    "static/js/main.7155aea7.js"
+  ]
+}
